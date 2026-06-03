@@ -1,7 +1,200 @@
 <!doctype html>
-<meta charset=
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介</title>
+    <style>
+        :root {
+            --primary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+        }
 
-"utf-8">
-<title>自己紹介</title>
-<h1>自己紹介</h1>
-<p>授業で作成したページです。</p>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin: 0 0 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .work-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+            background-color: #fafbfc;
+        }
+
+        .work-item h3 {
+            margin-top: 0;
+        }
+
+        .notice {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 0.8rem;
+            border-radius: 4px;
+            border-left: 4px solid #bdc3c7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        /* スマートフォン向け調整 */
+        @media (max-width: 600px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+            main {
+                margin: 1rem auto;
+            }
+            section {
+                padding: 1.2rem;
+                margin-bottom: 1rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>自己紹介</h1>
+        <p>授業で作成したページです。</p>
+    </header>
+
+    <main>
+        <!-- About セクション -->
+        <section id="about">
+            <h2>About</h2>
+            <p>はじめまして。私の自己紹介ページにアクセスしていただきありがとうございます。</p>
+            
+            <h3>関心分野・学んでいること</h3>
+            <p>現在、大学の講義を通じてWebサイトの仕組みや情報デザインについて学んでいます。特に、ユーザーにとって情報が整理されていて見やすいレイアウトの構築や、スマートフォンの普及に応じたレスポンシブなデザインに関心を持っています。</p>
+            
+            <p class="notice">※個人情報保護の観点から、詳細な連絡先や個人情報は掲載していません。</p>
+        </section>
+
+        <!-- Skills セクション -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>これまでの学習や授業を通じて、以下のような技術や知識の習得に取り組んでいます。</p>
+            <ul>
+                <li><strong>HTML5:</strong> 適切なタグを用いた、意味の通じる文書構造の記述</li>
+                <li><strong>CSS3:</strong> スマートフォンとPCの双方に対応する、読みやすい外観のデザインと装飾</li>
+                <li><strong>情報デザイン:</strong> 情報を整理し、優先度を考慮した分かりやすい配置の検討</li>
+            </ul>
+        </section>
+
+        <!-- Works セクション -->
+        <section id="works">
+            <h2>Works</h2>
+            <p>これまでの授業で制作した成果物と、その説明です。</p>
+            
+            <div class="work-item">
+                <h3>成果物：自己紹介Webページ（本サイト）</h3>
+                <p><strong>概要:</strong> HTMLとCSSを用いて、1ファイルで完結するシンプルな自己紹介用ポートフォリオを作成しました。</p>
+                <p><strong>工夫した点:</strong> 外部の画像やライブラリに依存せず、軽量かつレスポンシブ（スマートフォン対応）なレイアウトを意識してコーディングを行いました。</p>
+            </div>
+        </section>
+
+        <!-- Reflection セクション -->
+        <section id="reflection">
+            <h2>Reflection</h2>
+            <p>今回のWebサイト制作演習を通じて、単に文字を表示させるだけでなく、閲覧する端末（PCやスマートフォン）に合わせた柔軟な表示設計がいかに重要であるかを理解することができました。</p>
+            <p>今後は、さらに複雑なレイアウトや、アクセシビリティ（誰もが利用しやすい設計）についての学びを深め、より実用的なWebコンテンツの制作に挑戦していきたいと考えています。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 自己紹介ポートフォリオ. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // 将来的な動的機能拡張（インタラクションの実装など）のための領域
+        console.log("自己紹介ページが正常に読み込まれました。");
+    </script>
+</body>
+</html>
